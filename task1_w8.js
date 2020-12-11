@@ -8,12 +8,13 @@ function addItemCart(e){
     var child =  e.target;
     var product = child.parentElement
     var find = product.querySelector("i")
+    var find2 = product.querySelector("p")
     i=i+1;
     modal = `<div class=" my-2 d-flex justify-content-between text-dark add-cart-${i}" id=''>
             <button class="btn btn-sm btn-danger deleteId${i}" onclick="deleteItem(${i})" id="deleteId-${i}">Delete form cart</button>
         </div>`
     add = document.getElementsByClassName("model-get-value")[0].innerHTML += modal
-    document.getElementsByClassName("add-cart-"+i)[0].append(find)
+    document.getElementsByClassName("add-cart-"+i)[0].append(find2, find)
 }
 
 function deleteItem(value){
